@@ -122,7 +122,7 @@ public class EventCenter : BaseManager<EventCenter>
         }
         else 
         {
-            Debug.Log("事件中心报错:" + "没有这个事件");
+            Debug.Log("事件中心报错:" + "没有这个事件"+name);
         }
     }
     //重载不需要参数的版本

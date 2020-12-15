@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{59F56AD6-D0C3-F3F0-5DF4-96F8BA664321}</ProjectGuid>
+    <ProjectGuid>{423F5588-D243-5F52-BE87-2DD3EF847523}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -64,18 +64,25 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Custom\Consts.cs" />
-    <Compile Include="Assets\Scripts\Custom\RoleState.cs" />
+    <Compile Include="Assets\Scripts\Custom\Interface\IDamage.cs" />
+    <Compile Include="Assets\Scripts\Custom\Role\RoleState.cs" />
     <Compile Include="Assets\Scripts\Game\Bullet\BaseBullet.cs" />
     <Compile Include="Assets\Scripts\Game\Bullet\Bullet_0.cs" />
+    <Compile Include="Assets\Scripts\Game\Bullet\Enemy_Bullet_0.cs" />
     <Compile Include="Assets\Scripts\Game\Effects\BaseEffect.cs" />
     <Compile Include="Assets\Scripts\Game\Effects\Bullet_Impact_Effect.cs" />
+    <Compile Include="Assets\Scripts\Game\Effects\Enemy_Hurted_Effect.cs" />
     <Compile Include="Assets\Scripts\Game\Enemy\EnemyAnimation.cs" />
+    <Compile Include="Assets\Scripts\Game\Enemy\EnemyAttack.cs" />
     <Compile Include="Assets\Scripts\Game\Enemy\EnemyMovement.cs" />
     <Compile Include="Assets\Scripts\Game\Enemy\EnemyState.cs" />
-    <Compile Include="Assets\Scripts\Game\PlayerController\GunRotation.cs" />
-    <Compile Include="Assets\Scripts\Game\PlayerController\PlayerAnim.cs" />
-    <Compile Include="Assets\Scripts\Game\PlayerController\PlayerAttack.cs" />
-    <Compile Include="Assets\Scripts\Game\PlayerController\PlayerMovement.cs" />
+    <Compile Include="Assets\Scripts\Game\Other\Splatter.cs" />
+    <Compile Include="Assets\Scripts\Game\Player\GunRotation.cs" />
+    <Compile Include="Assets\Scripts\Game\Player\PlayerAnim.cs" />
+    <Compile Include="Assets\Scripts\Game\Player\PlayerAttack.cs" />
+    <Compile Include="Assets\Scripts\Game\Player\PlayerMovement.cs" />
+    <Compile Include="Assets\Scripts\Game\Player\PlayerState.cs" />
+    <Compile Include="Assets\Scripts\Game\UI\PlayerPanel.cs" />
     <Compile Include="Assets\Scripts\ProjectBaseTang\AStar\AStarMgr.cs" />
     <Compile Include="Assets\Scripts\ProjectBaseTang\AStar\AStarNode.cs" />
     <Compile Include="Assets\Scripts\ProjectBaseTang\Base\BaseManager.cs" />
@@ -627,85 +634,85 @@
       <HintPath>D:/Unity Stall/2019.4.14f1c1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Xml.Serialization.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline.Editor">
-      <HintPath>D:/unityProject/updateGit/2dTopDown/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+      <HintPath>D:/unityProject/updateGit/2dTopDownGame/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Animation.Runtime">
-      <HintPath>D:/unityProject/updateGit/2dTopDown/Library/ScriptAssemblies/Unity.2D.Animation.Runtime.dll</HintPath>
+      <HintPath>D:/unityProject/updateGit/2dTopDownGame/Library/ScriptAssemblies/Unity.2D.Animation.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.PixelPerfect.Editor">
-      <HintPath>D:/unityProject/updateGit/2dTopDown/Library/ScriptAssemblies/Unity.2D.PixelPerfect.Editor.dll</HintPath>
+      <HintPath>D:/unityProject/updateGit/2dTopDownGame/Library/ScriptAssemblies/Unity.2D.PixelPerfect.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
-      <HintPath>D:/unityProject/updateGit/2dTopDown/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+      <HintPath>D:/unityProject/updateGit/2dTopDownGame/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.SpriteShape.Editor">
-      <HintPath>D:/unityProject/updateGit/2dTopDown/Library/ScriptAssemblies/Unity.2D.SpriteShape.Editor.dll</HintPath>
+      <HintPath>D:/unityProject/updateGit/2dTopDownGame/Library/ScriptAssemblies/Unity.2D.SpriteShape.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>D:/unityProject/updateGit/2dTopDown/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>D:/unityProject/updateGit/2dTopDownGame/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Path.Editor">
-      <HintPath>D:/unityProject/updateGit/2dTopDown/Library/ScriptAssemblies/Unity.2D.Path.Editor.dll</HintPath>
+      <HintPath>D:/unityProject/updateGit/2dTopDownGame/Library/ScriptAssemblies/Unity.2D.Path.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>D:/unityProject/updateGit/2dTopDown/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+      <HintPath>D:/unityProject/updateGit/2dTopDownGame/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-      <HintPath>D:/unityProject/updateGit/2dTopDown/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+      <HintPath>D:/unityProject/updateGit/2dTopDownGame/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Animation.Triangle.Runtime">
-      <HintPath>D:/unityProject/updateGit/2dTopDown/Library/ScriptAssemblies/Unity.2D.Animation.Triangle.Runtime.dll</HintPath>
+      <HintPath>D:/unityProject/updateGit/2dTopDownGame/Library/ScriptAssemblies/Unity.2D.Animation.Triangle.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="PsdPlugin">
-      <HintPath>D:/unityProject/updateGit/2dTopDown/Library/ScriptAssemblies/PsdPlugin.dll</HintPath>
+      <HintPath>D:/unityProject/updateGit/2dTopDownGame/Library/ScriptAssemblies/PsdPlugin.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>D:/unityProject/updateGit/2dTopDown/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>D:/unityProject/updateGit/2dTopDownGame/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
-      <HintPath>D:/unityProject/updateGit/2dTopDown/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+      <HintPath>D:/unityProject/updateGit/2dTopDownGame/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Mathematics">
-      <HintPath>D:/unityProject/updateGit/2dTopDown/Library/ScriptAssemblies/Unity.Mathematics.dll</HintPath>
+      <HintPath>D:/unityProject/updateGit/2dTopDownGame/Library/ScriptAssemblies/Unity.Mathematics.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Psdimporter.Editor">
-      <HintPath>D:/unityProject/updateGit/2dTopDown/Library/ScriptAssemblies/Unity.2D.Psdimporter.Editor.dll</HintPath>
+      <HintPath>D:/unityProject/updateGit/2dTopDownGame/Library/ScriptAssemblies/Unity.2D.Psdimporter.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.InternalAPIEngineBridge.001">
-      <HintPath>D:/unityProject/updateGit/2dTopDown/Library/ScriptAssemblies/Unity.InternalAPIEngineBridge.001.dll</HintPath>
+      <HintPath>D:/unityProject/updateGit/2dTopDownGame/Library/ScriptAssemblies/Unity.InternalAPIEngineBridge.001.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Sprite.Editor">
-      <HintPath>D:/unityProject/updateGit/2dTopDown/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
+      <HintPath>D:/unityProject/updateGit/2dTopDownGame/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Common.Runtime">
-      <HintPath>D:/unityProject/updateGit/2dTopDown/Library/ScriptAssemblies/Unity.2D.Common.Runtime.dll</HintPath>
+      <HintPath>D:/unityProject/updateGit/2dTopDownGame/Library/ScriptAssemblies/Unity.2D.Common.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Tilemap.Editor">
-      <HintPath>D:/unityProject/updateGit/2dTopDown/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
+      <HintPath>D:/unityProject/updateGit/2dTopDownGame/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.SpriteShape.Runtime">
-      <HintPath>D:/unityProject/updateGit/2dTopDown/Library/ScriptAssemblies/Unity.2D.SpriteShape.Runtime.dll</HintPath>
+      <HintPath>D:/unityProject/updateGit/2dTopDownGame/Library/ScriptAssemblies/Unity.2D.SpriteShape.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.PixelPerfect">
-      <HintPath>D:/unityProject/updateGit/2dTopDown/Library/ScriptAssemblies/Unity.2D.PixelPerfect.dll</HintPath>
+      <HintPath>D:/unityProject/updateGit/2dTopDownGame/Library/ScriptAssemblies/Unity.2D.PixelPerfect.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Animation.Editor">
-      <HintPath>D:/unityProject/updateGit/2dTopDown/Library/ScriptAssemblies/Unity.2D.Animation.Editor.dll</HintPath>
+      <HintPath>D:/unityProject/updateGit/2dTopDownGame/Library/ScriptAssemblies/Unity.2D.Animation.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Mathematics.Editor">
-      <HintPath>D:/unityProject/updateGit/2dTopDown/Library/ScriptAssemblies/Unity.Mathematics.Editor.dll</HintPath>
+      <HintPath>D:/unityProject/updateGit/2dTopDownGame/Library/ScriptAssemblies/Unity.Mathematics.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>D:/unityProject/updateGit/2dTopDown/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>D:/unityProject/updateGit/2dTopDownGame/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Common.Editor">
-      <HintPath>D:/unityProject/updateGit/2dTopDown/Library/ScriptAssemblies/Unity.2D.Common.Editor.dll</HintPath>
+      <HintPath>D:/unityProject/updateGit/2dTopDownGame/Library/ScriptAssemblies/Unity.2D.Common.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.InternalAPIEditorBridge.001">
-      <HintPath>D:/unityProject/updateGit/2dTopDown/Library/ScriptAssemblies/Unity.InternalAPIEditorBridge.001.dll</HintPath>
+      <HintPath>D:/unityProject/updateGit/2dTopDownGame/Library/ScriptAssemblies/Unity.InternalAPIEditorBridge.001.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-      <HintPath>D:/unityProject/updateGit/2dTopDown/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+      <HintPath>D:/unityProject/updateGit/2dTopDownGame/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup></ItemGroup>

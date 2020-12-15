@@ -91,7 +91,6 @@ public class PoolMgr :BaseManager<PoolMgr>
     /// <param name="name"></param>
     public GameObject GetObj(string name)
     {
-        Debug.Log(poolDic[name].poolList.Count);
 
         GameObject obj = null;
         //有属于这个物体的小池子 并且里面要有东西

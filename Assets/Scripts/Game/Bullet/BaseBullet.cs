@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class BaseBullet : MonoBehaviour, IReusable
 {
+
     public virtual void OnSpawn()
     {
         

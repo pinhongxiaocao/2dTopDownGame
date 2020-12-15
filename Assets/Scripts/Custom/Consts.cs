@@ -4,9 +4,29 @@ using UnityEngine;
 
 namespace Consts 
 {
+    public class BulletGame 
+    {
+        public static string Bullet_0 = "Bullets/Bullet_0";
+        public static string Enemy_Bullet_0 = "Bullets/Enemy_Bullet_0";
+    }
+
+    /// <summary>
+    /// 管理粒子效果
+    /// </summary>
+    public class ParticleName 
+    {
+        public static string Bullet_Impact_Effect = "Effect/Bullet_Impact_Effect";
+        public static string Enemy_Hurted_Effect = "Effect/Enemy_Hurted_Effect";
+    }
+
+
+    /// <summary>
+    /// 管理标签名字
+    /// </summary>
     public class Tags 
     {
         public static string Player = "Player";
+        public static string Enemy = "Enemy";
     }
 
     /// <summary>
@@ -17,8 +37,13 @@ namespace Consts
         public static string PlayerMove = "PlayerMove";
         public static string PlayerIdle = "PlayerIdle";
 
+        public static string PlayerHealth = "PlayerHealth";
+
         public static string EnemyMove = "EnemyMove";
         public static string EnemyIdle = "EnemyIdle";
+        public static string EnemyAttack = "EnemyAttack";// 一个二维向量参数
+
+
     }
 
     /// <summary>

@@ -5,19 +5,13 @@ using UnityEngine;
 public class Bullet_Impact_Effect : BaseEffect
 {
 
-    void Destroy()
-    {
-        PoolMgr.GetInstance().PushObj("Effect/Bullet_Impact_Effect", this.gameObject);
-    }
-
+    /// <summary>
+    /// 在对象池初始化的时候 修改一下名即可
+    /// </summary>
     public override void OnSpawn()
     {
+        effectName = Consts.ParticleName.Bullet_Impact_Effect;
         base.OnSpawn();
-        Invoke("Destroy", 0.25f);
     }
 
-    public override void OnUnspawn()
-    {
-        base.OnUnspawn();
-    }
 }

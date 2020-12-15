@@ -13,10 +13,9 @@ public class EnemyMovement : MonoBehaviour
     private float rangeToChasePlayer=7f;
     private Vector3 moveDirection;
 
-    #region Unity事件监听
+    #region Unity生命周期
     private void Awake()
     {
-
         //找到目标玩家
         target = GameObject.FindGameObjectWithTag("Player").transform;
         //挂组件
@@ -25,9 +24,17 @@ public class EnemyMovement : MonoBehaviour
 
     private void Update()
     {
+        if (target == null)
+        {
+            theRB.velocity = Vector2.zero;
+            return;
+        }
+
         if (Vector3.Distance(this.transform.position, target.position) < rangeToChasePlayer) 
         {
             moveDirection = target.position - transform.position;
+            //此时找到了玩家 触发攻击事件
+            EventCenter.GetInstance().EventTrigger<Vector3>(Consts.EventName.EnemyAttack, moveDirection);
         }
         else
         {
