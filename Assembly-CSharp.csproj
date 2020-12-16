@@ -65,6 +65,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Custom\Consts.cs" />
     <Compile Include="Assets\Scripts\Custom\Interface\IDamage.cs" />
+    <Compile Include="Assets\Scripts\Custom\Interface\IRecover.cs" />
     <Compile Include="Assets\Scripts\Custom\Role\RoleState.cs" />
     <Compile Include="Assets\Scripts\Game\Bullet\BaseBullet.cs" />
     <Compile Include="Assets\Scripts\Game\Bullet\Bullet_0.cs" />
@@ -76,12 +77,17 @@
     <Compile Include="Assets\Scripts\Game\Enemy\EnemyAttack.cs" />
     <Compile Include="Assets\Scripts\Game\Enemy\EnemyMovement.cs" />
     <Compile Include="Assets\Scripts\Game\Enemy\EnemyState.cs" />
+    <Compile Include="Assets\Scripts\Game\Other\Breakable.cs" />
+    <Compile Include="Assets\Scripts\Game\Other\BrokenPiece.cs" />
     <Compile Include="Assets\Scripts\Game\Other\Splatter.cs" />
+    <Compile Include="Assets\Scripts\Game\Pickups\BasePickup.cs" />
+    <Compile Include="Assets\Scripts\Game\Pickups\Pickups_health.cs" />
     <Compile Include="Assets\Scripts\Game\Player\GunRotation.cs" />
     <Compile Include="Assets\Scripts\Game\Player\PlayerAnim.cs" />
     <Compile Include="Assets\Scripts\Game\Player\PlayerAttack.cs" />
     <Compile Include="Assets\Scripts\Game\Player\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\Game\Player\PlayerState.cs" />
+    <Compile Include="Assets\Scripts\Game\StaticDamage\StaticDamage.cs" />
     <Compile Include="Assets\Scripts\Game\UI\PlayerPanel.cs" />
     <Compile Include="Assets\Scripts\ProjectBaseTang\AStar\AStarMgr.cs" />
     <Compile Include="Assets\Scripts\ProjectBaseTang\AStar\AStarNode.cs" />

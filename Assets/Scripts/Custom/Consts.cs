@@ -4,6 +4,19 @@ using UnityEngine;
 
 namespace Consts 
 {
+    /// <summary>
+    /// 一些可破坏物品的名字
+    /// </summary>
+    public class BreakableName 
+    {
+        public static string Box = "Breakable/Box/Box";
+        public static string BrokenPiece = "Breakable/Box/BrokenPiece";
+    }
+
+
+    /// <summary>
+    /// 子弹名字
+    /// </summary>
     public class BulletGame 
     {
         public static string Bullet_0 = "Bullets/Bullet_0";
@@ -36,6 +49,8 @@ namespace Consts
     {
         public static string PlayerMove = "PlayerMove";
         public static string PlayerIdle = "PlayerIdle";
+        public static string PlayerDash = "PlayerDash";
+
 
         public static string PlayerHealth = "PlayerHealth";
 
@@ -51,6 +66,7 @@ namespace Consts
     /// </summary>
     public class AnimParams 
     {
-        public static string isMoving = "isMoving";
+        public static string isMoving = "isMoving";//bool
+        public static string dash = "dash";//trigger
     }
 }

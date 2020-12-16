@@ -17,12 +17,14 @@ public class PlayerAnim : MonoBehaviour
     {
         EventCenter.GetInstance().AddEventListener(Consts.EventName.PlayerMove,Move);
         EventCenter.GetInstance().AddEventListener(Consts.EventName.PlayerIdle,Idle);
+        EventCenter.GetInstance().AddEventListener(Consts.EventName.PlayerDash,Dash);
     }
 
     private void OnDestroy()
     {
         EventCenter.GetInstance().RemoveEventListener(Consts.EventName.PlayerMove, Move);
         EventCenter.GetInstance().RemoveEventListener(Consts.EventName.PlayerIdle, Idle);
+        EventCenter.GetInstance().RemoveEventListener(Consts.EventName.PlayerDash, Dash);
     }
     #endregion
 
@@ -35,6 +37,11 @@ public class PlayerAnim : MonoBehaviour
     private void Idle()
     {
         anim.SetBool(Consts.AnimParams.isMoving, false);
+    }
+
+    private void Dash() 
+    {
+        anim.SetTrigger(Consts.AnimParams.dash);
     }
     #endregion
 }

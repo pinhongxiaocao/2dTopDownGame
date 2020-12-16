@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class PlayerState : RoleState,IDamage
+public class PlayerState : RoleState,IDamage,IRecover
 {
     [SerializeField]protected new int health=300;
     [SerializeField]protected new int maxHealth=300;
@@ -44,6 +44,15 @@ public class PlayerState : RoleState,IDamage
             }
         }
 
+    }
+
+    public void RecoverHealth(int hp)
+    {
+        health += hp;
+        if (health >= maxHealth) 
+        {
+            health = maxHealth;
+        }
     }
     #endregion
 
